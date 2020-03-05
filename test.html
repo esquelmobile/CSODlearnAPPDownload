@@ -283,7 +283,8 @@
                 this.btnDownloadText = this.languageText.en.DownloadText1;
                 this.btnOpenText = this.languageText.en.OpenText1;
             }
-            this.open();
+            setTimeout(()=>{this.open();},1000);
+            
         },
         methods: {
             download: function () {
