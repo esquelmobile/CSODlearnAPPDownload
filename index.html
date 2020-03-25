@@ -283,11 +283,13 @@
                 document.title = this.languageText.en.APPName + " " + this.languageText.en.Download;
                 this.btnDownloadText = this.languageText.en.DownloadText1;
             }
-
+            let that=this;
             window.onload =  ()=> {
-                this.showPreLoader=false;
+                that.showPreLoader=false;
+                var isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+                
                 if (isiOS) {
-                    this.download();
+                    that.download();
                 }else{
                     var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight; //兼容IOS，不需要的可以去掉
 
